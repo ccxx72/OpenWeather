@@ -53,13 +53,13 @@ const String longitude = "86.9250"; // 180.000 to -180.000 negative for West
 const String language = "en"; // Default language = en = English
 
 // Short day of week abbreviations used in 4 day forecast (change to your language)
-const String shortDOW [8] = {"???", "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
+const String shortDOW [8] = {"???", "DOM", "LUN", "MAR", "MER", "GIO", "VEN", "SAB"};
 
 // Change the labels to your language here:
-const char sunStr[]        = "Sun";
-const char cloudStr[]      = "Cloud";
-const char humidityStr[]   = "Humidity";
-const String moonPhase [8] = {"New", "Waxing", "1st qtr", "Waxing", "Full", "Waning", "Last qtr", "Waning"};
+const char sunStr[]        = "Sole";
+const char cloudStr[]      = "Nuvole";
+const char humidityStr[]   = "Umidita";
+const String moonPhase [8] = {"Nuova", "Crescente", "Primo/4", "Crescente", "Piena", "Calante", "Ultimo/4", "Calante"};
 
 // End of user settings
 //////////////////////////////
