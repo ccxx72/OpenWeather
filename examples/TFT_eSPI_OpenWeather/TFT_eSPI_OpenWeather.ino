@@ -329,7 +329,7 @@ void drawTime() {
 **                          Draw the current weather
 ***************************************************************************************/
 void drawCurrentWeather() {
-  String date = "Updated: " + strDate(current->dt);
+  String date = "Aggiornamento: " + strDate(current->dt);
   String weatherText = "None";
 
   tft.setTextDatum(BC_DATUM);
@@ -527,27 +527,27 @@ const char* getMeteoconIcon(uint16_t id, bool today)
 {
   if ( today && id/100 == 8 && (current->dt < current->sunrise || current->dt > current->sunset)) id += 1000; 
 
-  if (id/100 == 2) return "thunderstorm";
+  if (id/100 == 2) return "temporale";
   if (id/100 == 3) return "drizzle";
-  if (id/100 == 4) return "unknown";
-  if (id == 500) return "lightRain";
+  if (id/100 == 4) return "sconosciuto";
+  if (id == 500) return "pioggia leggera";
   else if (id == 511) return "sleet";
-  else if (id/100 == 5) return "rain";
+  else if (id/100 == 5) return "pioggia";
   if (id >= 611 && id <= 616) return "sleet";
-  else if (id/100 == 6) return "snow";
-  if (id/100 == 7) return "fog";
-  if (id == 800) return "clear-day";
-  if (id == 801) return "partly-cloudy-day";
-  if (id == 802) return "cloudy";
-  if (id == 803) return "cloudy";
-  if (id == 804) return "cloudy";
-  if (id == 1800) return "clear-night";
-  if (id == 1801) return "partly-cloudy-night";
-  if (id == 1802) return "cloudy";
-  if (id == 1803) return "cloudy";
-  if (id == 1804) return "cloudy";
+  else if (id/100 == 6) return "neve";
+  if (id/100 == 7) return "nebbia";
+  if (id == 800) return "cielo terso";
+  if (id == 801) return "parzialmente nuvoloso";
+  if (id == 802) return "nuvoloso";
+  if (id == 803) return "nuvoloso";
+  if (id == 804) return "nuvoloso";
+  if (id == 1800) return "cielo stellato";
+  if (id == 1801) return "parzialmente nuvoloso";
+  if (id == 1802) return "nuvoloso";
+  if (id == 1803) return "nuvoloso";
+  if (id == 1804) return "nuvoloso";
 
-  return "unknown";
+  return "sconosciuto";
 }
 
 /***************************************************************************************
